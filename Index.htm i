@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindFlow AI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #252b40;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #7c5cff;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #8b6cff;
+    }
+
+    .hero p {
+      color: #aab1c5;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    .chat {
+      background: #151b2e;
+      border: 1px solid #292f46;
+      border-radius: 18px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .message {
+      background: #202840;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      color: #dfe4f2;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    input {
+      flex: 1;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #343b55;
+      background: #0d1324;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      padding: 15px 22px;
+      border: none;
+      border-radius: 10px;
+      background: #7c5cff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      color: #697189;
+      padding: 40px 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .input-area {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Mind<span>Flow</span> AI</div>
+  </header>
+
+  <section class="hero">
+    <h1>Your ideas, <span>amplified.</span></h1>
+
+    <p>
+      Welcome to MindFlow AI — your intelligent assistant for
+      learning, creating, brainstorming and getting things done.
+    </p>
+
+    <div class="chat">
+      <div class="message">
+        👋 Hello! I'm MindFlow AI. How can I help you today?
+      </div>
+
+      <div class="input-area">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Ask MindFlow AI anything..."
+        >
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 MindFlow AI
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      alert("MindFlow AI received: " + message);
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
